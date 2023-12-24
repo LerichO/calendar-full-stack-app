@@ -4,11 +4,11 @@ Simple productivity web application that will be built using MongoDB, React, and
 
 ## Features to Implement
 
-[ ] Clock Component
-[ ] To-Do list
-  [ ] Mark off items when completed
-  [ ] Dynamic UI depending on severity / distance of deadline
-  [ ] Able to overlay onto calendar
-[ ] Calendar
-[ ] User Account Create / Login
-[ ] Save User Calendar and To-Do List to MongoDB database
+* [ ] Clock Component
+* [ ] To-Do list
+  * [ ] Mark off items when completed
+  * [ ] Dynamic UI depending on severity / distance of deadline
+  * [ ] Able to overlay onto calendar
+* [ ] Calendar
+* [ ] User Account Create / Login
+* [ ] Save User Calendar and To-Do List to MongoDB database

@@ -1,6 +1,6 @@
 # Lerich Osay's Calendar / To-Do List Full-Stack Web Application
 
-Simple productivity web application that will be built using MongoDB, React, and Spring over the course of Winter 2023/24. Both the React and Spring application will be held in this repository, navigate to either respective folder to run them. 
+Simple productivity web application that will be built using MongoDB, React, and Express over the course of Winter 2023/24. Both the React and Express application will be held in this repository, navigate to either respective folder to run them. 
 
 ## Features to Implement
 

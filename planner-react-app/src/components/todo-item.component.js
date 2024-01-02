@@ -11,11 +11,16 @@ export default class ToDoItem extends Compnent{
 
     componentDidMount(){
 
-        //temporary server location for development
-        axios.get('http://localhost:5000/users')
+        //localhost port 5000 temporary server location for development
+        axios.get('http://localhost:5000/users/')
         .then(response => {
-            this.setState({user})
+            this.setState({
+                user : response.data.user
+            })
         })
+
+        //still need to find a way to get ObjectID from MongoDB doc of todo items
+        // axios.get(`http://localhost:5000/${ObjectID}`).then()
 
     }
 

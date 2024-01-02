@@ -15,7 +15,7 @@ export default class ToDoItem extends Compnent{
         axios.get('http://localhost:5000/users/')
         .then(response => {
             this.setState({
-                user : response.data.user
+                username : response.data.user
             })
         })
 

@@ -21,4 +21,11 @@ public class UserController {
     public ResponseEntity<Optional<User>> getUser(@PathVariable String username){
         return new ResponseEntity<Optional<User>>(userService.getUser(username), HttpStatus.OK);
     }
+
+    @GetMapping("/createUser")
+    public ResponseEntity<String> createUser(String username, String password){
+        return new ResponseEntity<String>("", HttpStatus.OK);
+    }
+
+//    @GetMapping("/{username}/update/planner")
 }

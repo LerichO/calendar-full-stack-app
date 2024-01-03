@@ -7,8 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends MongoRepository<User, String> {
+public interface ToDoItemRepository extends MongoRepository<ToDoItem, ObjectId>{
 
-    Optional<User> findUserByName(String username);
-//    Optional<User> findUserById(ObjectId id);
+    Optional<ToDoItem> findToDoItemById(ObjectId id);
 }

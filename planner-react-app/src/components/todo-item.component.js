@@ -6,7 +6,12 @@ export default class ToDoItem extends Compnent{
         super(props)
 
         this.markCompleted = this.markCompleted.bind(this);
-        this.state = {title : "", description : "", date : new Date()}
+        this.state = {
+            title : "",
+            description : "",
+            date : new Date(),
+            completed : false
+        }
     }
 
     componentDidMount(){
@@ -15,15 +20,18 @@ export default class ToDoItem extends Compnent{
         axios.get('http://localhost:5000/users/')
         .then(response => {
             this.setState({
-                username : response.data.user
+                user : response.data.user
             })
         })
 
-        //still need to find a way to get ObjectID from MongoDB doc of todo items
+        //url of API endpoint is subject to change
         // axios.get(`http://localhost:5000/${ObjectID}`).then()
 
     }
 
+    /* Will undergo an HTTP UPDATE request and handle updating the
+     * MongoDB collections with the updated status of the todo item.
+    */
     markCompleted(){
 
     }

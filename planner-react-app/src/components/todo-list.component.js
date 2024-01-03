@@ -20,7 +20,7 @@ export default class ToDoList extends Component{
 
     componentDidMount(){
 
-        // url of API endpoint is subject to change
+        //url of API endpoint is subject to change
         axios.get(`http://localhost:5000/users/${username}`)
         .then(response => {
             this.setState({
@@ -30,37 +30,31 @@ export default class ToDoList extends Component{
         })
     }
 
-    renderToDoItem(item){
+    renderToDoItem(){
 
-        var title;
-        var description;
-        var date;
-        var completed;
-
-        // url of API endpoint is subject to change
-        axios.get(`http://localhost:5000/todo/${item}`)
-        .then(response => {
-            title = response.data.title;
-            description = response.data.description;
-            date = response.data.date;
-            completed = response.data.completed;
+        return this.state.todo.map(todoItemId => {
+            //url of API endpoint is subject to change
+            axios.get(`http://localhost:5000/todo/${todoItemId}`)
+            .then(response => {
+                return <ToDoItem 
+                    title={response.data.title}
+                    description={response.data.description}
+                    date={response.data.date}
+                    completed={response.data.completed}
+                />
+            })
         })
-
-        return(
-            <ToDoItem title={title} description={description} />
-        );
     }
 
     render(){
         return (
             <div className="m-3">
+                <b>{this.state.username}'s To-Do List</b>
                 <ul>
                     {/* Will use JavaScript to iterate through 
                     props to add ToDoItems when implemented */}
 
-                    {
-                        this.state.todo.forEach(renderToDoItem)
-                    }
+                    { this.renderToDoitem() }
 
                     {/* stand in ToDoItem for now */}
                     <ToDoItem title="Thing 1" description="Do this thing"/>

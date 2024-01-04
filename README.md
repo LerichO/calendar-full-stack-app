@@ -2,18 +2,23 @@
 
 Simple productivity web application that will be built using **MongoDB**, **React**, and **Spring** over the course of Winter 2023/24. Both the React client application and Spring server application will be held in this repository, navigate to either respective folder to run them. Remember to make sure the requried dependencies are installed before running.
 
-## Features to Implement
+## Key Features to Implement
 
 * [ ] Clock Component
 * [ ] To-Do list
   * [ ] Mark off items when completed
   * [ ] Dynamic UI depending on severity / deadline of item
   * [ ] Able to overlay onto calendar
+  * [x] MongoDB collection for to-do items
 * [ ] Calendar
 * [ ] User Account Create / Login
-* [ ] Save User Calendar and To-Do List to MongoDB database
+  * [x] Create Log In / Sign up Form template
+  * [ ] Link session / token that controls access to user info
+  * [x] MongoDB collection for users
+* [ ] Able to save User Calendar and To-Do List to MongoDB database
+  * [x] Create API endpoints in Spring application for planner data 
 
-### Dependencies
+## Dependencies
 
 **Client**
 * react v18.2.0

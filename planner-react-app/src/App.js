@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Planner from "./pages/planner"
-import LoginForm from "./components/login-form.component";
+import LoginForm from "./pages/login-form";
 
 const App = () => {
 

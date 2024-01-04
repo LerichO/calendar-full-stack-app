@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import ToDoItem from "./todo-item";
+import ToDoItem from "./todo-item.component";
 
 //localhost port 5000 will be a temporary server location for development
 const API_ROOT_URL = `http://localhost:5000`
@@ -25,7 +25,7 @@ export default class ToDoList extends Component{
     componentDidMount(){
 
         //url of API endpoint is subject to change
-        axios.get(API_ROOT_URL + `/users/${username}`)
+        axios.get(API_ROOT_URL + `/users/${this.state.username}`)
         .then(response => {
             this.setState({
                 user : response.data.user,

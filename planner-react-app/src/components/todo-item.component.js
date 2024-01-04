@@ -4,7 +4,7 @@ import axios from 'axios';
 //localhost port 5000 will be a temporary server location for development
 const API_ROOT_URL = `http://localhost:5000`
 
-export default class ToDoItem extends Compnent{
+export default class ToDoItem extends Component{
 
     constructor(props){
         super(props);

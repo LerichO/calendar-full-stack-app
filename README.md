@@ -21,6 +21,7 @@ Simple productivity web application that will be built using **MongoDB**, **Reac
 * react-router-dom v6.21.1
 * react-scripts v5.0.1
 * tailwindcss v3.4.0
+* axios v1.6.4
 
 **Server**
 * spring-boot-starter-web v3.2.1

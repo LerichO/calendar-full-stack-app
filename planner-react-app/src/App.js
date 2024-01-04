@@ -6,7 +6,11 @@ import Redirect from "./components/redirect-btn";
 function App() {
 
   return (
-    <Redirect />
+    <main>
+      <Router>
+        
+      </Router>
+    </main>
   );
 }
 

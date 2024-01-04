@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+//localhost port 5000 will be a temporary server location for development
+const API_ROOT_URL = `http://localhost:5000`
 
 export default class ToDoItem extends Compnent{
 
     constructor(props){
-        super(props)
+        super(props);
 
         this.markCompleted = this.markCompleted.bind(this);
         this.state = {
@@ -17,7 +21,7 @@ export default class ToDoItem extends Compnent{
     componentDidMount(){
 
         //localhost port 5000 temporary server location for development
-        axios.get('http://localhost:5000/users/')
+        axios.get(API_ROOT_URL + '/users/')
         .then(response => {
             this.setState({
                 user : response.data.user

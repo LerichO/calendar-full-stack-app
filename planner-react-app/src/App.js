@@ -8,17 +8,33 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [token, setToken] = useState(null);
 
-  if(!token){
-    return <LoginForm />
+
+
+  const loggedIn = (token) => {
+
+    if (!token) {
+      return <LoginForm />
+    }
+
+    return (
+      <Router>
+        <Route path="/planner" element={<Planner />} />
+        <Route path="/account" /> {/* create account page/component */}
+      </Router>
+    );
   }
 
   return (
-    <main>
-      <Router>
-        <Route path="/planner" element={<Planner />}/>
-        <Route path="/account" /> {/* create account page/component */}
-      </Router>
-    </main>
+
+    /* Remember to fix the flexing on both the footer and page container */
+    <div className="auto grid h-screen min-h-[560px] w-screen place-items-center bg-grayscale-tertiary">
+      <main className="my-8 p-3 place-items-center">
+        {loggedIn(token)}
+      </main>
+      <footer className="auto grid bg-light-grayscale-secondary p-2 h-[50px] w-full self-end justify-center self-start content-center">
+        <p>Made by Lerich Osay</p>
+      </footer>
+    </div>
   );
 }
 

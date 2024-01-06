@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import CircumIcon from "@klarr-agency/circum-icons/react";
 
 const API_ROOT_URL = `http://localhost:5000`;
 
@@ -32,34 +33,29 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="relative m-8 p-3 bg-secondary text-text-primary">
+        <div className="relative max-w-[600px] min-w-[350px] p-3 bg-light-grayscale-tertiary text-text-primary rounded">
+            <h1 className="flex auto m-6 justify-center text-2xl font-bold">Log In or Sign Up</h1>
             <form className="relative grid justify-items-center">
-                <div className="relative m-8 p-3 inline-block space-y-8 grid justify-items-end">
-                    <div className="">
-                        <label>
-                            <b>Email: </b>
-                        </label>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <div className="relative m-8 mt-0 p-3 inline-block space-y-8 grid justify-items-end">
+                    <div className="relative flex auto">
+                        <div className="relative pr-3"><CircumIcon name="mail" color="#344e41" className="relative m-8 p-3"/></div>
+                        <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="p-1 text-text-secondary border-grayscale-primary" />
                     </div>
-                    <div>
-                        <label>
-                            <b>Username: </b>
-                        </label>
-                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <div className="relative flex auto">
+                        <div className="relative pr-3"><CircumIcon name="user" color="#344e41" className="relative m-8 p-3"/></div>
+                        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="p-1 text-text-secondary" />
                     </div>
-                    <div>
-                        <label>
-                            <b>Password: </b>
-                        </label>
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <div className="relative flex auto">
+                        <div className="relative pr-3"><CircumIcon name="lock" color="#344e41" className="relative m-8 p-3"/></div>
+                        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="p-1 text-text-secondary" />
                     </div>
-                    <div>
-                        <div id="submit-container">
-                            <div id="signup" onClick={onSignUp}>Sign Up</div>
-                            <div id="login" onClick={onLogIn}>Log In</div>
-                            <p>{error}</p>
-                        </div>
+                </div>
+                <div id="submit-container" className="relative flex">
+                    <div className="relative m-3 flex auto justify-items-center justify-items-stretch">
+                        <div id="signup-btn" onClick={onSignUp} className="grid w-[120px] m-3 p-3 bg-primary rounded justify-center text-text-white">Sign Up</div>
+                        <div id="login-btn" onClick={onLogIn} className="grid w-[120px] m-3 p-3 bg-secondary rounded justify-center text-text-primary">Log In</div>
                     </div>
+                    <p>{error}</p>
                 </div>
             </form>
         </div>

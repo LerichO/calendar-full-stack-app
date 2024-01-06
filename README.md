@@ -21,16 +21,17 @@ Simple productivity web application that will be built using **MongoDB**, **Reac
 ## Dependencies
 
 **Client**
-* react v18.2.0
-* react-dom v18.2.0
-* react-router-dom v6.21.1
-* react-scripts v5.0.1
-* tailwindcss v3.4.0
-* axios v1.6.4
+* ``react v18.2.0``
+* ``react-dom v18.2.0``
+* ``react-router-dom v6.21.1``
+* ``react-scripts v5.0.1``
+* ``tailwindcss v3.4.0``
+* ``axios v1.6.4``
+* ``@klarr-agency/circum-icons v1.1.39``
 
 **Server**
-* spring-boot-starter-web v3.2.1
-* spring-boot-starter-data-mongodb v3.2.1
-* spring-boot-devtools v3.2.1
-* spring-dotenv v3.0.0
-* lombok v1.18.30
+* ``spring-boot-starter-web v3.2.1``
+* ``spring-boot-starter-data-mongodb v3.2.1``
+* ``spring-boot-devtools v3.2.1``
+* ``spring-dotenv v3.0.0``
+* ``lombok v1.18.30``

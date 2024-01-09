@@ -27,7 +27,7 @@ const App = () => {
   return (
 
     /* Remember to fix the flexing on both the footer and page container */
-    <div className="auto grid h-screen min-h-[560px] w-screen place-items-center bg-grayscale-tertiary">
+    <div className="auto grid h-screen min-h-[560px] w-screen place-items-center bg-light-grayscale-primary">
       <main className="my-8 p-3 place-items-center">
         {loggedIn(token)}
       </main>
